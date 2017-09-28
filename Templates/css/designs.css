@@ -1,9 +1,13 @@
 .lead{
 	text-align: center;
 }
+.navbar-brand{
+   font-size: 150px
 
-.footer1{
-  position: relative;
+}
+
+.footer{
+  position: fixed;
   bottom: 0px;
   width: 100%;
   background-color: #559ABC;
@@ -22,6 +26,30 @@
 #h1 display{
 text-align: center;
 
+}
+.bg-color {
+    background-color: black;
+}
+.spacing{
+
+  padding-top: 20px;
+}
+
+.home-wrapper {
+    background-image: url(images/imagebanner.jpg);
+    background-size: cover;
+    height: 600px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.center-align {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.text-white {
+    color: #fff!important;
 }
 #row1{
 
@@ -77,7 +105,7 @@ text-align: center;
 
 }
 .container{
-  padding-top: 30px;
+  
 }
 .center{
 
