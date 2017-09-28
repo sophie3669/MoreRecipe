@@ -2,7 +2,7 @@
 	text-align: center;
 }
 .navbar-brand{
-   font-size: 150px
+   font-size: 150px;
 
 }
 
@@ -33,6 +33,19 @@ text-align: center;
 .spacing{
 
   padding-top: 20px;
+}
+
+.left-border hr{
+
+  border-color: black;
+  padding-top: 40px;
+  color: #fff ;
+}
+
+.bg-authpage{
+
+  background-image: url("../images/imagebanner.jpeg");
+   height: 800px;
 }
 
 .home-wrapper {

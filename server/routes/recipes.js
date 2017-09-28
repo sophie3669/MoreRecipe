@@ -1,7 +1,16 @@
 import express from 'express';
-import recipeController from '../controller/recipes';
+import {Recipe} from '../controller/recipes';
+const recipeController = new Recipe()
 
 let router = express.Router();
-router.get('/', recipeController.test) 
+router.post('/', recipeController.add)
+router.get('/', recipeController.getRecipe)
+router.delete('/', recipeController.deleteRecipe)
+
+
+
+
+
+
 
 export default router;
