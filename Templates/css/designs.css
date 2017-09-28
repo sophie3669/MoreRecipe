@@ -36,8 +36,7 @@ text-align: center;
 }
 
 .home-wrapper {
-    background-image: url(images/imagebanner.jpg);
-    background-size: cover;
+    background-image: url("../images/imagebanner.jpg");
     height: 600px;
     color: white;
     font-weight: bold;
