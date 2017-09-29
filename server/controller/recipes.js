@@ -51,10 +51,10 @@ class Recipe{
   put(req, res) {
   const  id = req.params.Id;
   const { recipeName, category } = req.body;
-  for (let i = 0; i < recipesdb.length; i++) {
+  for (let i = 0; i < db.recipesdb.length; i++) {
     if (db.recipesdb[i].id === parseInt(id, 10)){
       db.recipesdb[i].recipeName = recipeName || db.recipes[i].recipeName;
-      db.recipesdb[i].category = category || recipesdb[i].category;
+      db.recipesdb[i].category = category || db.recipesdb[i].category;
       
       
       return res.status(200).send(db.recipesdb[i]);   

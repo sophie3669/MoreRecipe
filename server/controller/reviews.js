@@ -1,5 +1,5 @@
 //check this well
-import {recipedb} from '../models/recipedb';
+import {db.recipedb} from '../models/recipedb';
 class Review {
  
   add(req, res) {
@@ -16,7 +16,7 @@ class Review {
         category: category,
         ingredients: review
       });
-      res.status(200).send(recipedb.review[id-1]);
+      res.status(200).send(db.recipedb.review[id-1]);
     }
   }
 }
