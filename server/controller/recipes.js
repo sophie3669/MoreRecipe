@@ -1,4 +1,4 @@
-import {recipesdb} from '../models/recipedb';
+import {db} from '../models/recipedb';
 class Recipe{
 
 	add(req, res){
@@ -26,19 +26,19 @@ class Recipe{
      ingredients: ingredients,
 
         }
-    recipesdb.push(newRecipe);
+    db.recipesdb.push(newRecipe);
     res.status(200).send(newRecipe);
      }
 
   getRecipe(req, res){
-     res.status(200).send(recipesdb);
+     res.status(200).send(db.recipesdb);
 
     } 
   deleteRecipe(req, res){
-  	for(let i=0; i < recipesdb.length; i++){
+  	for(let i=0; i < db.recipesdb.length; i++){
 
-  		if (recipesdb[i].Id === parseInt(req.params.userId, 3)){
-        recipesdb.splice(i, 1);
+  		if (parseInt(db.recipesdb[i].id,10) === parseInt(req.params.Id, 10)){
+        db.recipesdb.splice(i, 1);
         return res.status(204).send({
           message: 'Recipe Deleted'
         });
@@ -48,7 +48,24 @@ class Recipe{
       message: 'Recipe Not found!'
     });    
 }
+  put(req, res) {
+  const  id = req.params.Id;
+  const { recipeName, category } = req.body;
+  for (let i = 0; i < recipesdb.length; i++) {
+    if (db.recipesdb[i].id === parseInt(id, 10)){
+      db.recipesdb[i].recipeName = recipeName || db.recipes[i].recipeName;
+      db.recipesdb[i].category = category || recipesdb[i].category;
+      
+      
+      return res.status(200).send(db.recipesdb[i]);   
+    } 
+  }
+  return res.status(404).send({
+    message: 'Recipe Not found!'
+  });
+}
   
+    
     
   }
   

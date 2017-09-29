@@ -1,6 +1,6 @@
-let recipesdb = []
+let db = []
 
-recipesdb = [{
+db.recipesdb = [{
  id:1,
  recipeName: "fried Rice",
  Category: "Continental dish",
@@ -25,4 +25,13 @@ id:2,
  
 
 ];
-export {recipesdb};
+
+db.reviews = [
+{
+	id: 1,
+	userId: 3,
+	review: 'this is a cool recipe'
+}
+]
+
+export {db};

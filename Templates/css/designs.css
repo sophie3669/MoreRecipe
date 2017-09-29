@@ -55,6 +55,13 @@ text-align: center;
     font-weight: bold;
     text-align: center;
 }
+.home-wrapper2 {
+    background-image: url("../images/imagebanner.jpg");
+    height: 600px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
 .center-align {
     text-align: center;
     padding-bottom: 20px;
