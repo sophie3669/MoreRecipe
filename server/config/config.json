@@ -9,7 +9,7 @@
   "test": {
     "username": "sophia",
     "password": "sophie3669",
-    "database": "MoreRecipeDb",
+    "database": "MoreRecipeDb`git",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
