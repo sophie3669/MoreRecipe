@@ -1,78 +1,26 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
-import recipedb from '../src/models';
-import test from '../Server/test';
-//import faker from 'faker';
+import recipedb from '../models/recipedb';
+import server from '../bin/www';
 
 const should = chai.should();
 chai.use(chaiHttp);
-describe("morerecipes", () => {
-  it('shoud get the home page', (done) => {
-    chai.request(app)
-      .get('/')
-      .end((err, res) => {
-        res.should.have.status(200)
-        done()
-      })
-  })it('shoud return 200 for get request', (done) => {
-    chai.request(test)
-      .getRecipe('/')
-      .end((err, res) => {
-        res.should.have.status(200)
-        done()
-      })
-    })
-    it('shoud return 200 for delete request', (done) => {
-      chai.request(test)
-        .deleteRecipe('/')
+describe('MoreRecipes Tests:', () => {
+  describe('recipeController', () => {
+    it('should return status code of 200 when recipe is added successfully', (done) => {
+      chai.request(server)
+        .post('/api/recipes')
+        .send({
+          id: 1,
+          recipeName: 'Test recipe',
+          category: 'African Dish',
+          ingredients: 'Lets see'
+        })
         .end((err, res) => {
-          res.should.have.status(200)
-          done()
-        })
-      })
-      it('shoud return 200 for put request', (done) => {
-        chai.request(test)
-          .add('/')
-          .end((err, res) => {
-            res.should.have.status(200)
-            done()
-          })
-        })
-  it('shoud return 200 for get request', (done) => {
-    chai.request(test)
-      .getRecipe('/')
-      .end((err, res) => {
-        res.should.have.status(200)
-        done()
-      })
-    })
-    it('shoud return 200 for delete request', (done) => {
-      chai.request(test)
-        .deleteRecipe('/')
-        .end((err, res) => {
-          res.should.have.status(200)
-          done()
-        })
-      })
-      it('shoud return 200 for put request', (done) => {
-        chai.request(test)
-          .add('/')
-          .end((err, res) => {
-            res.should.have.status(200)
-            done()
-          })
-        })
-    
-    it('should return 404 for un defined page', (done) => {
-    chai.request(test)
-      .get('/Server/test')
-      .end((err, res) => {
-        res.should.have.status(404)
-        done()
-      })
-    })
-})
-
-
-
-
+          res.should.have.status(400);
+          res.body.should.be.a('object');
+          done();
+        });
+    });
+  });
+});
