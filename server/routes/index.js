@@ -1,4 +1,4 @@
-const usercontroller = require('../controller').usercontroller;
+const usercontroller = require('../controller').usercontrollers;
 
 module.exports = (app) => {
   app.get('/api/recipes', (req, res) => res.status(200).send({

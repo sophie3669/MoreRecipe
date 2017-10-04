@@ -100,11 +100,11 @@ class MoreRecipe {
         message: 'Item removed successfully!',
         recipes: db.recipesdb
       });
-    } else {
-      return res.status(404).send({
-        message: 'Recipe not found'
-      });
     }
+    return res.status(404).send({
+      message: 'Recipe not found'
+    });
+
   }
   /**
    * 
@@ -126,8 +126,8 @@ class MoreRecipe {
     const id = req.params.recipeId;
     const { userId, review } = req.body;
     let foundId = false;
-    if(typeof parseInt(id, 10) === 'number' &&
-    typeof parseInt(userId, 10) === 'number' && 
+    if (typeof parseInt(id, 10) === 'number' &&
+    typeof parseInt(userId, 10) === 'number' &&
     typeof review === 'string') {
       for (let iterate = 0; iterate < db.recipesdb.length; iterate += 1) {
         if (db.recipesdb[iterate].id === parseInt(id, 10)) {
@@ -153,11 +153,11 @@ class MoreRecipe {
           message: 'Recipe not found!'
         });
       }
-           
+
     } else {
       res.status(400).send({
         message: 'Invalid parameter!'
-      })
+      });
     }
   }
   /**
@@ -166,8 +166,8 @@ class MoreRecipe {
    * @param {object} res
    * @return {json} json object 
    */
-  vote(req, res){
-    
+  vote(req, res) {
+
   }
 }
 
