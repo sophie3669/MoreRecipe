@@ -1,5 +1,7 @@
-const user = require('./usercontrollers');
+import user from './usercontrollers';
+import recipesController from './recipesController';
 
-module.exports = {
-  user
+export default {
+  user,
+  recipesController
 };

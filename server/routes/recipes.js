@@ -1,18 +1,16 @@
 import express from 'express';
-// import { Recipe } from '../controller/recipes';
-import { MoreRecipe } from '../controller/recipeController';
+import MoreRecipes from '../controller';
 // import { Review } from "../controller/reviews";
-
+const recipes = MoreRecipes.recipesController;
 // const recipeController = new Recipe();
 // const reviewController = new Review();
-const MoreRecipes = new MoreRecipe();
 
 const router = express.Router();
-router.post('/api/recipes', MoreRecipes.add);
-router.put('/api/recipes/:recipeId', MoreRecipes.update);
-router.delete('/api/recipes/:recipeId', MoreRecipes.delete);
-router.get('/api/recipes', MoreRecipes.getRecipe);
-router.post('/api/recipes/:recipeId/reviews', MoreRecipes.reviewRecipe);
-router.post('/api/recipes/:recipeId/vote', MoreRecipes.vote);
+router.post('/api/recipes', recipes.add);
+// router.put('/api/recipes/:recipeId', recipes.update);
+// router.delete('/api/recipes/:recipeId', recipes.delete);
+// router.get('/api/recipes', recipes.getRecipe);
+// router.post('/api/recipes/:recipeId/reviews', recipes.reviewRecipe);
+// router.post('/api/recipes/:recipeId/vote', recipes.vote);
 
 export default router;

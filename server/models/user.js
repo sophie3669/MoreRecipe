@@ -1,4 +1,4 @@
-
+import bcrypt from 'bcryptjs';
 
 module.exports = (sequelize, DataTypes) => {
   const user = sequelize.define('user', {
@@ -13,12 +13,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
     photo: DataTypes.BLOB
-  }, {
-    classMethods: {
-      associate(models) {
-        // associations can be defined here
-      }
+  }, { hooks: {
+    beforeCreate: (regUser) => {
+      regUser.password = bcrypt.hashSync(regUser.password, bcrypt.genSaltSync(8));
+    },
+    afterUpdate: (regUser) => {
+      regUser.password = bcrypt.hashSync(regUser.password, bcrypt.genSaltSync(8));
     }
+  }
   });
   return user;
 };

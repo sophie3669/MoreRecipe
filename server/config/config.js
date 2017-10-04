@@ -1,23 +1,3 @@
-{
-  "development": {
-    "username": "postgres",
-    "password": "sophie3669",
-    "database": "MoreRecipeDb",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  },
-  "test": {
-    "username": "postgres",
-    "password": "sophie3669",
-    "database": "MoreRecipeDb`git",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
+module.exports = {
+  secret: 'supersecret'
+};
