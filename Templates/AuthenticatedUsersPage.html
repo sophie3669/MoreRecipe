@@ -16,49 +16,101 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="navbar-brand" href="HomePage.html"><h2>MoreRecipe</h2></a>
+          <a class="navbar-brand" href="HomePage.html"><img src="images/capture.jpg"></a>
         </li>
         </ul>
           
       </div>
   </nav>
-  <div class="bg-authpage">
-    <div>
-<div class="container left-border">
-  <div class="row">
-    <div class= col-4>
-    <ul class="list-group">
-  <li class="list-group-item active">VIEW PROFILE</li>
-  <li class="list-group-item">FAVORITES</li>
-  <li class="list-group-item"><a href="ProfilePage.html">EDIT PROFILE</a></li>
-  <li class="list-group-item"><a href="addrecipe.html">ADD AND MODIFY RECIPE</a></li>
-  <li class="list-group-item"><a href="HomePage.html">LOG OUT</a></li>
-</ul>
-</div> 
-<div class= col-2>
- <img src="images/avata.jpg" alt="Smiley face" height="" width="">
-  </div>
-<div class= col-2>
-
-</div>
-<div class= col-4>
-  <h4>PROFILE DETAILS </h4>
+ <div class="container">
+    <h1>Edit Profile</h1>
     <hr>
-  
-  <h5>Ebokam Sophia</h5><br>
-  <h5> ANAMBRA STATE</h5>
-  <h5> An Aspiring Software Developer</h5>
-  <h5> FESS DELIGHT ENTERPRISE</h5>
-  <h5> ebokamsomto@yahoo.com </h5>
-  <hr>
-  
-</div>
-</div>
-</div>
+  <div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="images/avata.jpg" class="img-rounded" alt="avatar">
+          <h6>Upload a different photo...</h6>
+          
+          <input type="file" class="form-control">
+        </div>
+      </div>
+      
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        
+        <h1>Personal info</h1>
+        
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-lg-3 control-label">First name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="" placeholder="Sophia">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Last name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="" placeholder="Ebokam">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text" value="" placeholder="ebokamsomto@yahoo.com">
+            </div>
+          </div>  
+          <h1>Recipes</h1>
+          <hr>
+          
+          <div class= "col-addrecipe">
+
+         <button type="button" class="btn btn-primary  btn-block">Add New Recipe</button><br>
+              <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="modal" data-target="#exampleModalLong">
+              Beans
+              </button> 
+               
+              <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
 
-<hr>
-      <footer class="bg-color footer2">
+
+          </div><br>
+          <div>
+
+           <button type="button" class="btn btn-primary  btn-block">Add to Favorite Recipe</button><br>
+         <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Fried Rice
+  </button>
+
+          </div>
+         
+
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+      <footer class="bg-color footer1">
         <div class="container">
             <div class="row">
               <div class="col text-center text-white">
