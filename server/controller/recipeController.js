@@ -1,4 +1,4 @@
-import { db } from '../models/recipedb';
+import { db } from '../models/recipe';
 /**
  * @class MoreRecipe
  */
