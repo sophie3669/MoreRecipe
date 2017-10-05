@@ -7,6 +7,11 @@ const recipes = MoreRecipes.recipesController;
 
 const router = express.Router();
 router.post('/api/recipes', recipes.add);
+
+router.put('/api/recipes/:recipeId', recipes.update);
+// router.delete('/api/recipes/:recipeId', recipes.delete);
+// router.get('/api/recipes', recipes.getRecipe);
+
 //router.put('/api/recipes/:recipeId', recipes.update);
 //router.delete('/api/recipes/:recipeId', recipes.delete);
 //router.get('/api/recipes', recipes.getRecipe);
