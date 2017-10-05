@@ -23,6 +23,27 @@
   color: #000F16;
   padding: 10px 10px 0px 30px;
 }
+
+
+.bg-img{
+
+background-image: url("../images/chicken_wine_dishes_70992_1920x1080.jpg");
+  
+
+}
+.form1{
+
+  color: #F0EFF3;
+
+}
+
+.btn-dropdown{
+    width: 800px;
+     overflow-y: auto;
+    overflow-x: hidden;
+    height: 80px;
+    
+}
 #h1 display{
 text-align: center;
 
