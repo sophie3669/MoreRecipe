@@ -29,9 +29,26 @@ id:2,
 db.reviews = [
 {
 	id: 1,
+	recipeId: 1,
 	userId: 3,
 	review: 'this is a cool recipe'
+},
+{
+	id: 2,
+	recipeId: 1,
+	userId: 3,
+	review: 'Sorry what did I say again'
 }
-]
+];
 
-export {db};
+db.votes = [
+	{
+		id: 1,
+		recipeId: 1,
+		upVotes: [1, 2, 3],
+		downVotes: [4]
+	},
+	]
+
+
+export { db };
