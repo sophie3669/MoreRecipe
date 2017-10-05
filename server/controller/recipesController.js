@@ -1,7 +1,7 @@
 import models from '../models';
 import jwt from 'jsonwebtoken';
 /**
- * @class MoreRecipe
+ * @class recipe
  */
 const recipes = models.recipe;
 export default {
@@ -12,7 +12,7 @@ export default {
  * @return {object} json object
  */
   add(req, res) {
-    // console.log(req.body);
+  
     return recipes
       .create(req.body).then((created) => {
         if (created) {
@@ -21,6 +21,7 @@ export default {
           });
         } else {
           res.status(500).send({
+
             message: 'Sorry try again!'
           });
         }
@@ -55,6 +56,3 @@ export default {
     }
   
 };
-
-
-
